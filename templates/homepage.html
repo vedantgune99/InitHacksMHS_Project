@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+
+<section class="container mt-5">
+
+
+    <div class="m-4">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F0%2F2%2F5%2F1516067-mental-health-wallpaper-1920x1080-for-xiaomi.jpg&f=1&nofb=1&ipt=2bb92fedd0a395ffdc8b5ec9971257a0dda4645088c4c63165767bd46768c9f5&ipo=images"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp9074628.jpg&f=1&nofb=1&ipt=dcb970f380eab5bf41a1bd498b76d75e3ce7eaf3fbaaa22ebc4c9520a47cca7b&ipo=images"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.defense.gov%2F2021%2FFeb%2F09%2F2002579057%2F1920%2F1080%2F0%2F210219-F-PO640-0004.JPG&f=1&nofb=1&ipt=9ba19c8c9b933522084546fffce7c7e6186f88e33a9b4e85b894dc02173644b6&ipo=images"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <p class="h2 mt-5 mb-5" align="center">Aspects of Mental Health</p>
+    <div class="p-2 mx-2 w-80 align-items-center">
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card mx-3 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="https://t3.ftcdn.net/jpg/04/00/38/86/360_F_400388679_dmUTdbK8sn5SSuP34VUrnaZAIZWysGKL.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Emotional Stability</h5>
+                        <p class="card-text">Maintaining a balanced emotional & mental state, self-awareness, and
+                            effective
+                            way
+                            coping in
+                            various situations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="card mx-3 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Psychological Resilience</h5>
+                        <p class="card-text">Bouncing back from, learning from setbacks, and adapting positively
+                            to mental and physical challenges.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="card mx-3 shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                    <img src="https://media.istockphoto.com/id/1340029934/vector/online-therapy-woman-supports-man-with-psychological-problems-girl-comforts-her-sad-male.jpg?s=612x612&w=0&k=20&c=9-MH5G0UoqdLlyhRatovV2a6VmSeSjiSV1qNGjrMxiM="
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Social Support & Relationships</h5>
+                        <p class="card-text">Connections provide emotional support
+                            reduce isolation and enhancing
+                            overall well-being & support.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

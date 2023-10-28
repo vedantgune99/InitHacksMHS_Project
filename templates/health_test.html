@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<section class="py-5 bg-light">
+
+    <p class="h2 my-5" align="center">
+        Tech Industry Stress Test
+
+    </p>
+
+    <div class="container">
+
+        <div class="max-width-lg mx-auto bg-white shadow p-4 rounded">
+            <h2 class="h4 font-weight-bold mb-4">Test your mental health</h2>
+            <p class="text-secondary mb-4">An example test of Mental Health Test for Tech-Savvy People...</p>
+            <form action="{% url 'health_test' %}" method="POST">
+                {% csrf_token %}
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" name="name" required id="name" placeholder="Enter your full name"
+                            class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="text" name="age" required id="age" placeholder="Enter your age..."
+                            class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="g" class="form-label">Gender :</label>
+                        <select name="g" required id="gender" class="form-control">
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                            <option value="2">Transgender</option>
+                        </select>
+                    </div>
+                    <!-- Question 1 -->
+                    <div class="col-md-6">
+                        <label for="se" class="form-label">1) Are you self-employed?</label>
+                        <select name="q1" required id="se" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="col-md-6">
+                        <label for="fh" class="form-label">2) Do you have a family history of mental
+                            illness?</label>
+                        <select name="q2" required id="fh" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <!-- Question 3 -->
+                    <div class="col-md-6">
+                        <label for="wi" class="form-label">3) If you have a mental health condition, do you feel
+                            that
+                            it interferes with your work?</label>
+                        <select name="q3" required id="wi" class="form-control">
+                            <option value="0">Never</option>
+                            <option value="1">Often</option>
+                            <option value="2">Rarely</option>
+                            <option value="3">Sometimes</option>
+                        </select>
+                    </div>
+                    <!-- Question 4 -->
+                    <div class="col-md-6">
+                        <label for="noe" class="form-label">4) How many employees does your company or organization
+                            have?</label>
+                        <select name="q4" required id="noe" class="form-control">
+                            <option value="5">6 - 25</option>
+                            <option value="2">26 - 100</option>
+                            <option value="1">100 - 500</option>
+                            <option value="3">500 - 1000</option>
+                            <option value="4">More than 1000</option>
+                        </select>
+                    </div>
+                    <!-- Question 5 -->
+                    <div class="col-md-6">
+                        <label for="rw" class="form-label">5) Do you work remotely (outside of an office) at least
+                            50%
+                            of the time?</label>
+                        <select name="q5" required id="rw" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <!-- Question 6 -->
+                    <div class="col-md-6">
+                        <label for="tc" class="form-label">6) Is your employer primarily a tech
+                            company/organization?
+                        </label>
+                        <select name="q6" required id="tc" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <!-- Question 7 -->
+                    <div class="col-md-6">
+                        <label for="b" class="form-label">7) Does your employer provide mental health
+                            benefits?</label>
+                        <select name="q7" required id="b" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Don't know</option>
+                        </select>
+                    </div>
+                    <!-- Question 8 -->
+                    <div class="col-md-6">
+                        <label for="co" class="form-label">8) Do you know the options for mental health care your
+                            employer provides?</label>
+                        <select name="q8" required id="co" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="0">No</option>
+                            <option value="1">Not sure</option>
+                        </select>
+                    </div>
+                    <!-- Question 9 -->
+                    <div class="col-md-6">
+                        <label for="wp" class="form-label">9) Has your employer ever discussed mental health as part
+                            of
+                            an employee wellness program?</label>
+                        <select name="q9" required id="wp" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Don't Know</option>
+                        </select>
+                    </div>
+                    <!-- Question 10 -->
+                    <div class="col-md-6">10) about mental health issues and how to seek help?</label>
+                        <select name="q10" required id="sh" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Don't Know</option>
+                        </select>
+                    </div>
+                    <!-- Question 11 -->
+                    <div class="col-md-6">
+                        <label for="a" class="form-label">11) Is your anonymity protected if you choose to take
+                            advantage
+                            of mental health or substance abuse treatment resources?</label>
+                        <select name="q11" required id="a" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Don't Know</option>
+                        </select>
+                    </div>
+                    <!-- Question 12 -->
+                    <div class="col-md-6">
+                        <label for="l" class="form-label">12) How easy is it for you to take medical leave for a
+                            mental
+                            health condition?</label>
+                        <select name="q12" required id="l" class="form-control">
+                            <option value="1">Somewhat</option>
+                            <option value="2">Very Difficult</option>
+                            <option value="0">Don't Know</option>
+                        </select>
+                    </div>
+                    <!-- Question 13 -->
+                    <div class="col-md-6">
+                        <label for="mhc" class="form-label">13) Do you think that discussing a mental health issue
+                            with
+                            your employer would have negative consequences?</label>
+                        <select name="q13" required id="mhc" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Maybe</option>
+                        </select>
+                    </div>
+                    <!-- Question 14 -->
+                    <div class="col-md-6">
+                        <label for="phc" class="form-label">14) Do you think that discussing a physical health issue
+                            with your employer would have negative consequences?</label>
+                        <select name="q14" required id="phc" class="form-control">
+                            <option value="0">Yes</option>
+                            <option value="1">No</option>
+                            <option value="2">Maybe</option>
+                        </select>
+                    </div>
+                    <!-- Question 15 -->
+                    <div class="col-md-6">
+                        <label for="c" class="form-label">15) Would you be willing to discuss a mental health issue
+                            with
+                            your coworkers?</label>
+                        <select name="q15" required id="c" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="0">No</option>
+                            <option value="1">Some of them</option>
+                        </select>
+                    </div>
+                    <!-- Question 16 -->
+                    <div class="col-md-6">
+                        <label for="s" class="form-label">16) Would you be willing to discuss a mental health issue
+                            with
+                            your direct supervisor(s)?</label>
+                        <select name="q16" required id="s" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="0">No</option>
+                            <option value="1">Some of them</option>
+                        </select>
+                    </div>
+                    <!-- Question 17 -->
+                    <div class="col-md-6">
+                        <label for="mhi" class="form-label">17) Would you bring up a mental health issue with a
+                            potential
+                            employer in an interview?</label>
+                        <select name="q17" required id="mhi" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Maybe</option>
+                        </select>
+                    </div>
+                    <!-- Question 18 -->
+                    <div class="col-md-6">
+                        <label for="phi" class="form-label">18) Would you bring up a physical health issue with a
+                            potential
+                            employer in an interview?</label>
+                        <select name="q18" required id="phi" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Maybe</option>
+                        </select>
+                    </div>
+                    <!-- Question 19 -->
+                    <div class="col-md-6">
+                        <label for="mvp" class="form-label">19) Do you feel that your employer takes mental health
+                            as
+                            seriously as physical health?</label>
+                        <select name="q19" required id="mvp" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                            <option value="0">Don't Know!</option>
+                        </select>
+                    </div>
+                    <!-- Question 20 -->
+                    <div class="col-md-6">
+                        <label for="oc" class="form-label">20) Have you heard of or observed negative consequences
+                            for
+                            coworkers with mental health conditions in your workplace?</label>
+                        <select name="q20" required id="oc" class="form-control">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary w-100">Check My Health</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
