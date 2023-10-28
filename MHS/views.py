@@ -9,3 +9,12 @@ def homepage(request):
 
 def about(request):
     return HttpResponse('Hello, About!')
+
+def contact(request):
+    return HttpResponse('Hello, Contact!')
+
+def health_test(request):
+    return HttpResponse('Hello, Test!')
+
+def chatbot(request):
+    return HttpResponse('Hello, Chatbot!')
