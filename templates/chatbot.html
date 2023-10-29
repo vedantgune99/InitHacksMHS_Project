@@ -6,6 +6,12 @@
 
 <section class="container">
 
+    {% if score is not None %}
+    Your test results are positive!
+    Consult with our chatbot
+    Score : {{ score }}
+    {% endif %}
+
     <script>(function () { var js, fs, d = document, id = "tars-widget-script", b = "https://tars-file-upload.s3.amazonaws.com/bulb/"; if (!d.getElementById(id)) { js = d.createElement("script"); js.id = id; js.type = "text/javascript"; js.src = b + "js/widget.js"; fs = d.getElementsByTagName("script")[0]; fs.parentNode.insertBefore(js, fs) } })(); window.tarsSettings = { "convid": "fnmpeF" };</script>
 
 
