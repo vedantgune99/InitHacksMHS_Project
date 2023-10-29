@@ -51,6 +51,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_COOKIE_DOMAIN = None
+CSRF_COOKIE_SECURE = None
 
 ROOT_URLCONF = 'MentalHealthSupport.urls'
 
