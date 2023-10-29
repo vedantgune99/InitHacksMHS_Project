@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2=s@_$^mo3xu+e=$7*rugda^so^zqrk=_gs$6bft-+bxb*+s0h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'mhsupport.azurewebsites.net']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Accounts',
     'MHS',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://mhsupport.azurewebsites.net",
+]
+
 
 ROOT_URLCONF = 'MentalHealthSupport.urls'
 

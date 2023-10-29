@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 scikit-learn = "==1.2.2"
 scipy = "==1.11.2"
+django-cors-headers = "*"
 
 [dev-packages]
 
