@@ -53,6 +53,7 @@ MIDDLEWARE = [
 
 CSRF_COOKIE_DOMAIN = None
 CSRF_COOKIE_SECURE = None
+CSRF_TRUSTED_ORIGINS = ['https://mhsupport.azurewebsites.net']
 
 ROOT_URLCONF = 'MentalHealthSupport.urls'
 
