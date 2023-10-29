@@ -125,10 +125,10 @@ def video_conference(request):
     message['to'] = spEmails
     message['subject'] = "Assistance Required !"
     message.attach(MIMEText(f"""
-                            Hello, {request.user}, + \
-                            \nKindly wait, the specialist is connecting... + \
-                            \nJoin here at + \ 
-                            \nRoom Link : http://127.0.0.1:8000/video_conference/?roomID=100                 
+                            Hello, {request.user}, 
+                            \nKindly wait, the specialist is connecting... 
+                            \nJoin here at 
+                            \nRoom Link : https://mhsupport.azurewebsites.net/video_conference/?roomID=100                 
                             """)
                    )
     with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
