@@ -127,7 +127,7 @@ def video_conference(request):
     message.attach(MIMEText(f"""
                             Hello, {request.user}, 
                             \nKindly wait, the specialist is connecting... 
-                            \nJoin here at 
+                            \nJoin here at, 
                             \nRoom Link : https://mhsupport.azurewebsites.net/video_conference/?roomID=100                 
                             """)
                    )
